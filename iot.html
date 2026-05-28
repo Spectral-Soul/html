@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITY10 - IoT Complete Answers</title>
+<style>
+body{font-family:Arial,sans-serif;line-height:1.6;margin:20px;background:#f4f4f4;color:#2c3e50}
+.container{max-width:900px;margin:0 auto;background:white;padding:30px;box-shadow:0 0 10px rgba(0,0,0,.1)}
+h1{color:#2c3e50;text-align:center;border-bottom:3px solid #3498db;padding-bottom:10px}
+h2{color:#2980b9;border-left:4px solid #3498db;padding-left:10px;margin-top:30px}
+h3{color:#16a085;margin-top:20px}
+h4{color:#7f8c8d;margin-top:15px}
+.test-header{background:#ecf0f1;padding:15px;border-radius:5px;margin-bottom:20px}
+.question{background:#f8f9fa;padding:15px;margin:15px 0;border-left:4px solid #3498db;border-radius:4px}
+.question strong{color:#2c3e50;display:block;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+table,th,td{border:1px solid #ddd}
+th,td{padding:10px;text-align:left}
+th{background:#3498db;color:white}
+tr:nth-child(even){background:#f2f2f2}
+ul,ol{margin-left:20px}
+li{margin:6px 0}
+.diagram{background:#fff;border:2px dashed #3498db;padding:20px;margin:20px 0;border-radius:8px;text-align:center}
+.diagram-title{font-weight:bold;color:#2980b9;margin-bottom:15px;font-size:1.1em}
+.diagram-caption{font-size:.85em;color:#7f8c8d;font-style:italic;margin-top:10px}
+svg{max-width:100%;height:auto}
+.tips{background:#fff3cd;border-left:4px solid #ffc107;padding:10px;margin:10px 0;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📱 ITY10 - INTERNET OF THINGS<br>Complete Answers with Diagrams</h1>
+
+<h2>CONTINUOUS ASSESSMENT TEST - I</h2>
+<div class="test-header"><strong>Date:</strong> 13.02.2026 | <strong>Max Marks:</strong> 25 | <strong>Duration:</strong> 50 mins</div>
+
+<div class="question">
+<strong>1. Enumerate the layerwise IoT protocols.</strong>
+<h3>IoT Protocols by Layer:</h3>
+<ul>
+<li><strong>Application:</strong> MQTT, CoAP, HTTP/HTTPS, AMQP, DDS</li>
+<li><strong>Transport:</strong> TCP (reliable), UDP (lightweight, preferred)</li>
+<li><strong>Network:</strong> IPv6, 6LoWPAN, RPL, LoRaWAN</li>
+<li><strong>Data Link/Physical:</strong> IEEE 802.15.4, WiFi, BLE, Zigbee, RFID, NFC</li>
+</ul>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: IoT Protocol Stack</div>
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="10" width="300" height="60" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+  <text x="200" y="35" text-anchor="middle" fill="white" font-weight="bold">Application Layer</text>
+  <text x="200" y="55" text-anchor="middle" fill="white" font-size="12">MQTT, CoAP, HTTP</text>
+  <rect x="50" y="80" width="300" height="60" fill="#16a085" stroke="#2c3e50" stroke-width="2"/>
+  <text x="200" y="105" text-anchor="middle" fill="white" font-weight="bold">Transport Layer</text>
+  <text x="200" y="125" text-anchor="middle" fill="white" font-size="12">TCP, UDP</text>
+  <rect x="50" y="150" width="300" height="60" fill="#e67e22" stroke="#2c3e50" stroke-width="2"/>
+  <text x="200" y="175" text-anchor="middle" fill="white" font-weight="bold">Network Layer</text>
+  <text x="200" y="195" text-anchor="middle" fill="white" font-size="12">IPv6, 6LoWPAN, RPL</text>
+  <rect x="50" y="220" width="300" height="60" fill="#9b59b6" stroke="#2c3e50" stroke-width="2"/>
+  <text x="200" y="245" text-anchor="middle" fill="white" font-weight="bold">Physical/Data Link</text>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-size="12">WiFi, BLE, Zigbee</text>
+  <line x1="200" y1="70" x2="200" y2="80" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="200" y1="140" x2="200" y2="150" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="200" y1="210" x2="200" y2="220" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#2c3e50"/></marker></defs>
+</svg>
+<div class="diagram-caption">Draw 4 stacked horizontal boxes with arrows between them.</div>
+</div>
+</div>
+
+<div class="question">
+<strong>2. Pros and cons of IPv4 and IPv6</strong>
+<table>
+<tr><th>Feature</th><th>IPv4</th><th>IPv6</th></tr>
+<tr><td>Address Size</td><td>32-bit (4.3B addresses)</td><td>128-bit (unlimited)</td></tr>
+<tr><td>Format</td><td>Dotted decimal (192.168.1.1)</td><td>Hex (2001:0db8::1)</td></tr>
+<tr><td>Security</td><td>IPsec optional</td><td>IPsec built-in</td></tr>
+<tr><td>Configuration</td><td>Manual/DHCP</td><td>Auto (SLAAC)</td></tr>
+<tr><td>Header</td><td>Complex, checksum</td><td>Simplified, no checksum</td></tr>
+<tr><td>NAT</td><td>Required</td><td>Not required</td></tr>
+<tr><td><strong>Pros</strong></td><td>Widely supported, mature</td><td>Huge address space, secure, efficient</td></tr>
+<tr><td><strong>Cons</strong></td><td>Address exhaustion, complex NAT</td><td>Migration hard, legacy issues</td></tr>
+</table>
+</div>
+
+<div class="question">
+<strong>3. IoT Sensors vs Actuators</strong>
+<table>
+<tr><th>Aspect</th><th>Sensors (Input)</th><th>Actuators (Output)</th></tr>
+<tr><td>Function</td><td>Detect physical changes → electrical signals</td><td>Electrical signals → physical action</td></tr>
+<tr><td>Direction</td><td>Physical → Digital</td><td>Digital → Physical</td></tr>
+<tr><td>Role</td><td>"Eyes & Ears"</td><td>"Hands & Feet"</td></tr>
+<tr><td>Examples</td><td>DHT11 (temp), PIR (motion), LDR (light)</td><td>Motor, Relay, Servo, Heater</td></tr>
+</table>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: Sensor & Actuator Flow</div>
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="70" width="120" height="60" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+  <text x="70" y="95" text-anchor="middle" fill="white" font-weight="bold">Physical</text>
+  <text x="70" y="115" text-anchor="middle" fill="white">World</text>
+  <rect x="190" y="70" width="120" height="60" fill="#f39c12" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="105" text-anchor="middle" fill="white" font-weight="bold">IoT Device</text>
+  <rect x="370" y="70" width="120" height="60" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+  <text x="430" y="95" text-anchor="middle" fill="white" font-weight="bold">Digital</text>
+  <text x="430" y="115" text-anchor="middle" fill="white">System</text>
+  <line x1="130" y1="90" x2="190" y2="90" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="160" y="82" text-anchor="middle" font-size="11">Sensor</text>
+  <line x1="370" y1="110" x2="310" y2="110" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="340" y="102" text-anchor="middle" font-size="11">Actuator</text>
+</svg>
+</div>
+</div>
+
+<div class="question">
+<strong>4. Cross-layer planes of WSN</strong>
+<p>In WSN, strict OSI layering is inefficient. Cross-layer design lets layers share info to save energy and improve performance.</p>
+<h3>Three Cross-Layer Planes:</h3>
+<ul>
+<li><strong>Power Management Plane:</strong> Monitors battery across all layers. Physical layer adjusts TX power, Network layer reduces routing frequency, Application layer slows sensing.</li>
+<li><strong>Mobility Management Plane:</strong> Tracks node movement. Data Link adjusts sync, Network updates routes dynamically.</li>
+<li><strong>Task Management Plane:</strong> Balances sensing tasks. Prevents duplicate sensors from working simultaneously.</li>
+</ul>
+<p><strong>Benefits:</strong> Energy efficiency, better QoS, reduced latency, extended network lifetime.</p>
+</div>
+
+<div class="question">
+<strong>5. ISO/OSI vs TCP/IP Layers</strong>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: OSI vs TCP/IP Comparison</div>
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+  <text x="120" y="20" text-anchor="middle" font-weight="bold" font-size="14">OSI (7 Layers)</text>
+  <text x="380" y="20" text-anchor="middle" font-weight="bold" font-size="14">TCP/IP (4 Layers)</text>
+  <rect x="20" y="30" width="200" height="35" fill="#e74c3c" stroke="#2c3e50"/><text x="120" y="52" text-anchor="middle" fill="white">Application</text>
+  <rect x="20" y="70" width="200" height="35" fill="#c0392b" stroke="#2c3e50"/><text x="120" y="92" text-anchor="middle" fill="white">Presentation</text>
+  <rect x="20" y="110" width="200" height="35" fill="#a93226" stroke="#2c3e50"/><text x="120" y="132" text-anchor="middle" fill="white">Session</text>
+  <rect x="20" y="150" width="200" height="35" fill="#e67e22" stroke="#2c3e50"/><text x="120" y="172" text-anchor="middle" fill="white">Transport</text>
+  <rect x="20" y="190" width="200" height="35" fill="#f39c12" stroke="#2c3e50"/><text x="120" y="212" text-anchor="middle">Network</text>
+  <rect x="20" y="230" width="200" height="35" fill="#27ae60" stroke="#2c3e50"/><text x="120" y="252" text-anchor="middle" fill="white">Data Link</text>
+  <rect x="20" y="270" width="200" height="35" fill="#16a085" stroke="#2c3e50"/><text x="120" y="292" text-anchor="middle" fill="white">Physical</text>
+  
+  <rect x="280" y="30" width="200" height="115" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/><text x="380" y="92" text-anchor="middle" fill="white" font-weight="bold">Application Layer</text>
+  <rect x="280" y="150" width="200" height="35" fill="#e67e22" stroke="#2c3e50"/><text x="380" y="172" text-anchor="middle" fill="white">Transport</text>
+  <rect x="280" y="190" width="200" height="35" fill="#f39c12" stroke="#2c3e50"/><text x="380" y="212" text-anchor="middle">Internet</text>
+  <rect x="280" y="230" width="200" height="75" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/><text x="380" y="272" text-anchor="middle" fill="white" font-weight="bold">Network Access</text>
+  
+  <line x1="220" y1="100" x2="280" y2="87" stroke="#2c3e50" stroke-dasharray="4"/>
+  <line x1="220" y1="167" x2="280" y2="167" stroke="#2c3e50" stroke-dasharray="4"/>
+  <line x1="220" y1="207" x2="280" y2="207" stroke="#2c3e50" stroke-dasharray="4"/>
+  <line x1="220" y1="267" x2="280" y2="267" stroke="#2c3e50" stroke-dasharray="4"/>
+</svg>
+<div class="diagram-caption">OSI Session+Presentation+Application merge into TCP/IP Application; OSI Data Link+Physical merge into Network Access.</div>
+</div>
+
+<h3>Example: Sending Email</h3>
+<p><strong>OSI:</strong> App formats → Presentation encrypts → Session opens → Transport (TCP) → Network (IP routes) → Data Link (Ethernet) → Physical</p>
+<p><strong>TCP/IP:</strong> Application (SMTP) handles all three top layers → Transport (TCP) → Internet (IP) → Network Access (WiFi/Ethernet)</p>
+</div>
+
+<h2>CONTINUOUS ASSESSMENT TEST - II</h2>
+<div class="test-header"><strong>Date:</strong> 19.03.2026 | <strong>Max Marks:</strong> 25 | <strong>Duration:</strong> 50 mins</div>
+
+<div class="question">
+<strong>1. Bluetooth-LE vs Zigbee Features</strong>
+<table>
+<tr><th>Feature</th><th>BLE</th><th>Zigbee</th></tr>
+<tr><td>Standard</td><td>IEEE 802.15.1</td><td>IEEE 802.15.4</td></tr>
+<tr><td>Frequency</td><td>2.4 GHz</td><td>2.4 GHz, 868 MHz, 915 MHz</td></tr>
+<tr><td>Data Rate</td><td>1 Mbps</td><td>20-250 kbps</td></tr>
+<tr><td>Range</td><td>10-100 m</td><td>10-100 m (mesh extendable)</td></tr>
+<tr><td>Topology</td><td>Star, Mesh (5.0+)</td><td>Star, Tree, Mesh (strong)</td></tr>
+<tr><td>Power</td><td>Very low</td><td>Very low (years on battery)</td></tr>
+<tr><td>Network Size</td><td>Up to 128</td><td>Up to 65,000 nodes</td></tr>
+<tr><td>Connection</td><td>3-6 ms (fast)</td><td>30-100 ms</td></tr>
+<tr><td>Use Case</td><td>Wearables, Healthcare</td><td>Home Automation, Industrial</td></tr>
+</table>
+</div>
+
+<div class="question">
+<strong>2. Technologies used in Web of Things (WoT)</strong>
+<ul>
+<li><strong>REST:</strong> HTTP methods (GET, POST, PUT, DELETE) for device control</li>
+<li><strong>JSON:</strong> Lightweight data format for device communication</li>
+<li><strong>WebSockets:</strong> Full-duplex real-time communication</li>
+<li><strong>URI/URL:</strong> Unique address for every IoT "thing"</li>
+<li><strong>HTTP/HTTPS:</strong> Standard web protocols (secure)</li>
+<li><strong>CoAP:</strong> Constrained protocol using UDP</li>
+<li><strong>RDF:</strong> Semantic web for device discovery</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>3. Role of Cloud Computing in Real-Time IoT</strong>
+<ul>
+<li><strong>Massive Storage:</strong> Databases and data lakes for TBs of sensor data</li>
+<li><strong>High-Performance Processing:</strong> Run ML/AI models on sensor data</li>
+<li><strong>Scalability:</strong> Auto-scale resources as device count grows</li>
+<li><strong>Real-Time Analytics:</strong> Stream processing (Kafka, Kinesis)</li>
+<li><strong>Remote Access:</strong> Access data from anywhere via internet</li>
+<li><strong>Device Management:</strong> OTA firmware updates, provisioning</li>
+<li><strong>Security:</strong> Encryption, authentication, threat detection</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>4. Solutions for IoT Network Attacks</strong>
+<ul>
+<li><strong>Lightweight Cryptography:</strong> ECC, SIMON/SPECK, PRESENT ciphers</li>
+<li><strong>Authentication:</strong> Digital certificates, 2FA, MAC filtering, OAuth</li>
+<li><strong>Secure Protocols:</strong> DTLS, TLS/SSL, IPsec, MQTT with TLS</li>
+<li><strong>Intrusion Detection (IDS):</strong> Network & host-based anomaly detection</li>
+<li><strong>Secure Boot & Firmware:</strong> Code signing, OTA updates, rollback protection</li>
+<li><strong>Network Segmentation:</strong> VLANs, firewalls, DMZ for IoT devices</li>
+<li><strong>Physical Security:</strong> Tamper-evident enclosures, secure elements</li>
+<li><strong>Regular Updates:</strong> Patch management, vulnerability scanning</li>
+<li><strong>Data Privacy:</strong> Encryption at rest, data minimization, GDPR compliance</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>5. Layered Architecture - Smart Healthcare & Disaster Management</strong>
+
+<h3>i) Smart Healthcare Architecture</h3>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: Smart Healthcare 4-Layer Architecture</div>
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="20" width="400" height="70" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="45" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Layer 4: Application</text>
+  <text x="250" y="65" text-anchor="middle" fill="white" font-size="11">Doctor Dashboard, Patient App, Alerts</text>
+  <text x="250" y="80" text-anchor="middle" fill="white" font-size="11">👨‍⚕️📱</text>
+  
+  <rect x="50" y="110" width="400" height="70" fill="#9b59b6" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="135" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Layer 3: Cloud/Processing</text>
+  <text x="250" y="155" text-anchor="middle" fill="white" font-size="11">Storage, Analytics, ML, Alerts</text>
+  <text x="250" y="170" text-anchor="middle" fill="white" font-size="11">☁️🤖</text>
+  
+  <rect x="50" y="200" width="400" height="70" fill="#e67e22" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="225" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Layer 2: Network/Transmission</text>
+  <text x="250" y="245" text-anchor="middle" fill="white" font-size="11">Gateway, WiFi, 4G/5G, MQTT</text>
+  <text x="250" y="260" text-anchor="middle" fill="white" font-size="11">📡📶</text>
+  
+  <rect x="50" y="290" width="400" height="70" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="315" text-anchor="middle" fill="white" font-weight="bold" font-size="14">Layer 1: Perception/Sensing</text>
+  <text x="250" y="335" text-anchor="middle" fill="white" font-size="11">Wearables, ECG, BP Monitor, Glucometer</text>
+  <text x="250" y="350" text-anchor="middle" fill="white" font-size="11">⌚💉</text>
+  
+  <line x1="250" y1="90" x2="250" y2="110" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="250" y1="180" x2="250" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="250" y1="270" x2="250" y2="290" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+</svg>
+<div class="diagram-caption">Draw 4 stacked rectangles with arrows pointing upward. Label each layer.</div>
+</div>
+
+<h3>Layer Functions:</h3>
+<ul>
+<li><strong>Perception:</strong> Wearable sensors collect vitals (HR, BP, glucose, SpO2)</li>
+<li><strong>Network:</strong> BLE/Zigbee to gateway → WiFi/4G → Internet</li>
+<li><strong>Cloud:</strong> Store records, run ML anomaly detection, generate alerts</li>
+<li><strong>Application:</strong> Doctor dashboard, patient app, emergency alerts</li>
+</ul>
+
+<h3>ii) Disaster Management Architecture</h3>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: Disaster Management Architecture</div>
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="20" width="400" height="70" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="45" text-anchor="middle" fill="white" font-weight="bold">Layer 4: Application</text>
+  <text x="250" y="65" text-anchor="middle" fill="white" font-size="11">Emergency Center, Public Alerts, Rescue Coordination</text>
+  <text x="250" y="80" text-anchor="middle" fill="white" font-size="11">🚨📢</text>
+  
+  <rect x="50" y="110" width="400" height="70" fill="#c0392b" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="135" text-anchor="middle" fill="white" font-weight="bold">Layer 3: Processing</text>
+  <text x="250" y="155" text-anchor="middle" fill="white" font-size="11">GIS, Analytics, Prediction Models</text>
+  <text x="250" y="170" text-anchor="middle" fill="white" font-size="11">🗺️📊</text>
+  
+  <rect x="50" y="200" width="400" height="70" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="225" text-anchor="middle" fill="white" font-weight="bold">Layer 2: Network</text>
+  <text x="250" y="245" text-anchor="middle" fill="white" font-size="11">Mesh Network, Satellite, UAV Relay</text>
+  <text x="250" y="260" text-anchor="middle" fill="white" font-size="11">🛰️📡</text>
+  
+  <rect x="50" y="290" width="400" height="70" fill="#2c3e50" stroke="#000" stroke-width="2"/>
+  <text x="250" y="315" text-anchor="middle" fill="white" font-weight="bold">Layer 1: Perception</text>
+  <text x="250" y="335" text-anchor="middle" fill="white" font-size="11">Seismic, Water Level, Gas, Camera, UAV</text>
+  <text x="250" y="350" text-anchor="middle" fill="white" font-size="11">🌊🔥🌋</text>
+  
+  <line x1="250" y1="90" x2="250" y2="110" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="250" y1="180" x2="250" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="250" y1="270" x2="250" y2="290" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+</svg>
+</div>
+</div>
+
+<h2>CONTINUOUS ASSESSMENT TEST - III</h2>
+<div class="test-header"><strong>Date:</strong> 04.05.2026 | <strong>Max Marks:</strong> 25 | <strong>Duration:</strong> 50 mins</div>
+
+<div class="question">
+<strong>1. Challenges in Internet of Vehicles (IoV)</strong>
+<ul>
+<li><strong>High Mobility & Handover:</strong> Fast-moving vehicles cause frequent cell tower switches; packet loss risks</li>
+<li><strong>Ultra-Low Latency:</strong> Safety apps need &lt;10ms; 100ms delay at 100 km/h = 2.8 m traveled</li>
+<li><strong>Security & Privacy:</strong> Hijacking risk, location tracking, message spoofing, DoS attacks</li>
+<li><strong>Scalability:</strong> Thousands of vehicles, each sending 1-10 msgs/sec → channel saturation</li>
+<li><strong>Heterogeneity:</strong> DSRC vs C-V2X vs 5G-V2X — different manufacturer protocols</li>
+<li><strong>Infrastructure:</strong> High cost of Road Side Units (RSUs); rural coverage gaps</li>
+<li><strong>Reliability:</strong> Harsh environments, weather effects, EM interference</li>
+<li><strong>Regulatory:</strong> Spectrum allocation, cross-border issues, liability</li>
+<li><strong>Cost:</strong> OBU deployment cost, infrastructure maintenance</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>2. Role of Blockchain in IoV</strong>
+
+<div class="diagram">
+<div class="diagram-title">📐 Diagram: IoV with Blockchain</div>
+<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cars -->
+  <rect x="30" y="200" width="80" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="70" y="225" text-anchor="middle" fill="white">Car 1</text>
+  <rect x="210" y="200" width="80" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="250" y="225" text-anchor="middle" fill="white">Car 2</text>
+  <rect x="390" y="200" width="80" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="430" y="225" text-anchor="middle" fill="white">Car 3</text>
+  
+  <!-- V2V arrows -->
+  <line x1="110" y1="215" x2="210" y2="215" stroke="#e67e22" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="210" y1="225" x2="110" y2="225" stroke="#e67e22" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="160" y="208" text-anchor="middle" fill="#e67e22" font-size="10">V2V</text>
+  
+  <line x1="290" y1="215" x2="390" y2="215" stroke="#e67e22" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="390" y1="225" x2="290" y2="225" stroke="#e67e22" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="340" y="208" text-anchor="middle" fill="#e67e22" font-size="10">V2V</text>
+  
+  <!-- RSU -->
+  <rect x="390" y="130" width="80" height="40" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
+  <text x="430" y="155" text-anchor="middle" fill="white">RSU</text>
+  <line x1="430" y1="170" x2="430" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="455" y="185" text-anchor="middle" font-size="10">V2I</text>
+  
+  <!-- Blockchain Cloud -->
+  <rect x="150" y="40" width="200" height="60" fill="#9b59b6" stroke="#2c3e50" stroke-width="2" rx="10"/>
+  <text x="250" y="65" text-anchor="middle" fill="white" font-weight="bold">Blockchain Ledger</text>
+  <text x="250" y="85" text-anchor="middle" fill="white" font-size="11">🔗 Immutable, Decentralized</text>
+  
+  <!-- Connections to blockchain -->
+  <line x1="70" y1="200" x2="180" y2="100" stroke="#9b59b6" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="250" y1="200" x2="250" y2="100" stroke="#9b59b6" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="430" y1="130" x2="320" y2="100" stroke="#9b59b6" stroke-width="1" stroke-dasharray="4"/>
+</svg>
+<div class="diagram-caption">Cars (V2V) + RSU (V2I) → Blockchain ledger for secure trust.</div>
+</div>
+
+<h3>Key Roles:</h3>
+<ul>
+<li><strong>Security & Trust:</strong> Immutable ledger, tamper-proof vehicle logs</li>
+<li><strong>Identity Management:</strong> Unique digital ID per vehicle, prevent cloning</li>
+<li><strong>Smart Contracts:</strong> Auto-payments for tolls, parking, EV charging; auto insurance claims</li>
+<li><strong>Secure Data Sharing:</strong> Verified traffic/road condition data, prevent fake alerts</li>
+<li><strong>Supply Chain:</strong> Track cargo, verify parts provenance</li>
+<li><strong>Privacy:</strong> Selective disclosure, zero-knowledge proofs</li>
+<li><strong>P2P Ride Sharing:</strong> Transparent pricing, no intermediaries</li>
+<li><strong>Energy Trading (V2G):</strong> P2P EV energy trading</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>3. Smart Power Meter Functional Modules</strong>
+<ul>
+<li><strong>Measurement Module:</strong> CT, PT, ADC — measure V, I, P, kWh, power factor</li>
+<li><strong>Processing Module (MCU):</strong> DSP, RTC, memory — real-time processing, TOU billing</li>
+<li><strong>Communication Module:</strong> RF Mesh, Cellular (NB-IoT), PLC, WiFi, LoRaWAN — DLMS/COSEM, Modbus</li>
+<li><strong>Display Unit:</strong> LCD showing kWh, voltage, cost, alerts</li>
+<li><strong>Power Supply:</strong> AC-DC converter + battery backup for last-gasp signal</li>
+<li><strong>Security Module:</strong> Crypto processor, AES-128, tamper detection</li>
+<li><strong>Memory:</strong> Flash, EEPROM, RAM — 30-90 day history</li>
+<li><strong>Tamper Detection:</strong> Magnetic field, cover open, bypass detection</li>
+</ul>
+</div>
+
+<div class="question">
+<strong>4. IoT Forensics Components</strong>
+<ul>
+<li><strong>Physical Layer Forensics:</strong>
+  <ul>
+    <li>Memory forensics (RAM dump, flash extraction)</li>
+    <li>Chip-off (JTAG interface, direct chip reading)</li>
+    <li>Hardware analysis (circuit board, tamper detection)</li>
+  </ul>
+</li>
+<li><strong>Network Layer Forensics:</strong>
+  <ul>
+    <li>Packet capture (Wireshark, tcpdump)</li>
+    <li>Protocol analysis (MQTT, CoAP)</li>
+    <li>Wireless forensics (WiFi, BLE, Zigbee)</li>
+    <li>Intrusion detection (malware, DDoS patterns)</li>
+  </ul>
+</li>
+<li><strong>Application/Cloud Forensics:</strong>
+  <ul>
+    <li>Cloud data acquisition (DB, API logs)</li>
+    <li>App logs (auth, commands, errors)</li>
+    <li>Sensor data analytics, timeline reconstruction</li>
+    <li>Mobile app data extraction</li>
+  </ul>
+</li>
+<li><strong>Evidence Tools:</strong> Write blockers, FTK, EnCase, Cellebrite, Volatility</li>
+<li><strong>Legal Components:</strong> Chain of custody, warrants, GDPR compliance, documentation</li>
+</ul>
+<h3>Process:</h3>
+<p>Identification → Preservation → Collection → Examination → Analysis → Reporting</p>
+</div>
+
+<div class="question">
+<strong>5. Smart Logistics - Functions & Technologies</strong>
+
+<h3>Basic Functions:</h3>
+<ul>
+<li><strong>Real-Time Tracking:</strong> Shipment location, inventory visibility, ETA</li>
+<li><strong>Inventory Management:</strong> Auto-reorder, JIT, warehouse optimization</li>
+<li><strong>Route Optimization:</strong> Dynamic routing, fleet management, fuel efficiency</li>
+<li><strong>Cold Chain Monitoring:</strong> Temperature, humidity, shock tracking</li>
+<li><strong>Predictive Maintenance:</strong> Vehicle health, proactive servicing</li>
+<li><strong>Automated Documentation:</strong> Digital BOL, invoices, customs</li>
+</ul>
+
+<h3>Key Technologies:</h3>
+<ul>
+<li><strong>RFID:</strong> Auto ID/tracking, no line-of-sight, bulk reading</li>
+<li><strong>GPS/GNSS:</strong> Global vehicle/shipment tracking, geofencing</li>
+<li><strong>IoT Sensors:</strong> Temp, humidity, accelerometer, door, light sensors</li>
+<li><strong>Cloud:</strong> Centralized storage, real-time analytics, multi-user access</li>
+<li><strong>Big Data & ML:</strong> Demand forecasting, route optimization</li>
+<li><strong>Blockchain:</strong> Supply chain transparency, smart contracts</li>
+<li><strong>AI/ML:</strong> Autonomous vehicles, warehouse robotics</li>
+<li><strong>Drones/AGVs:</strong> Last-mile delivery, warehouse automation</li>
+</ul>
+<p><strong>Benefits:</strong> 20-30% cost reduction, faster delivery, better customer satisfaction, lower carbon footprint.</p>
+</div>
+
+<div class="question">
+<strong>6. UAV-Assisted IoT Applications</strong>
+
+<h3>1. Precision Agriculture</h3>
+<ul>
+<li>Multispectral/hyperspectral cameras for crop health</li>
+<li>NDVI analysis for stress/disease detection</li>
+<li>Soil moisture mapping, irrigation management</li>
+<li>Automated pesticide/fertilizer spraying</li>
+<li><strong>Benefit:</strong> 15-25% yield increase, reduced chemicals</li>
+</ul>
+
+<h3>2. Disaster Management</h3>
+<ul>
+<li>Thermal imaging for search & rescue</li>
+<li>3D damage mapping with LIDAR</li>
+<li>Emergency supply delivery to isolated areas</li>
+<li>Wildfire detection and monitoring</li>
+</ul>
+
+<h3>3. Infrastructure Inspection</h3>
+<ul>
+<li>Power lines (thermal hotspots, corona discharge)</li>
+<li>Bridges/buildings (cracks, corrosion)</li>
+<li>Pipelines (leaks, security)</li>
+<li>Solar panels (defective panel detection)</li>
+</ul>
+
+<h3>4. Last-Mile Delivery</h3>
+<ul>
+<li>Amazon Prime Air, Wing, Zipline</li>
+<li>E-commerce, food, pharmaceutical delivery</li>
+<li>Blood/organ transport, rural healthcare</li>
+</ul>
+
+<h3>5. Environmental Monitoring</h3>
+<ul>
+<li>Air quality (PM2.5, NO2, SO2)</li>
+<li>Wildlife conservation (poaching prevention)</li>
+<li>Forest monitoring (deforestation, biodiversity)</li>
+</ul>
+
+<h3>6. Traffic Management</h3>
+<ul>
+<li>Real-time traffic flow analysis</li>
+<li>Accident & congestion detection</li>
+<li>Parking space monitoring</li>
+</ul>
+
+<h3>7. Security & Surveillance</h3>
+<ul>
+<li>Border patrol, perimeter security</li>
+<li>Large event monitoring, public safety</li>
+</ul>
+
+<h3>8. Construction & Mining</h3>
+<ul>
+<li>Topographic surveying, volume calculations</li>
+<li>Progress monitoring, stockpile management</li>
+</ul>
+
+<h3>Key UAV Technologies:</h3>
+<p>Sensors (RGB, multispectral, thermal, LIDAR), GPS, 4G/5G/Satellite, AI/ML (object detection, autonomous navigation), cloud processing.</p>
+
+<h3>Challenges:</h3>
+<p>Limited flight time (20-40 min), payload limits, regulations, weather dependency, privacy, collision avoidance.</p>
+</div>
+
+<div class="tips">
+<strong>📚 Exam Tips:</strong>
+<ul>
+<li>Draw diagrams using a ruler, label clearly with pencil</li>
+<li>Use bullet points for better readability</li>
+<li>Underline key terms and headings</li>
+<li>Include at least 2-3 real-world examples per answer</li>
+</ul>
+</div>
+
+<div style="text-align:center;padding:20px;background:#ecf0f1;border-radius:5px;margin-top:30px">
+<h3>✨ ALL THE BEST FOR YOUR EXAMS! ✨</h3>
+</div>
+</div>
+</body>
+</html>
